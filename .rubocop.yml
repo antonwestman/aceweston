@@ -8,6 +8,8 @@ AllCops:
     - deploy/**/*
     - vendor/**/*
     - lib/tasks/dev/**/*
+    - node_modules/**/*
+    - config/initializers/devise.rb
 
 Rails:
   Enabled: true
