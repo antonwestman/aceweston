@@ -36,6 +36,10 @@ gem 'devise_token_auth'
 gem 'omniauth'
 gem 'rack-cors'
 
+gem 'bootstrap', '4.1.1'
+gem 'font-awesome-sass'
+gem 'jquery-rails' # used by bootstrap js
+
 gem 'awesome_print'
 
 # Use Capistrano for deployment
