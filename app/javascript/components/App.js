@@ -38,10 +38,10 @@ class App extends React.Component {
 
   componentWillMount() {
     const auth = {
-      accessToken: window.localStorage.getItem("arkivit.accessToken"),
-      client: window.localStorage.getItem("arkivit.client"),
-      uid: window.localStorage.getItem("arkivit.uid"),
-      expiry: window.localStorage.getItem("arkivit.expiry")
+      accessToken: window.localStorage.getItem("maihoum.accessToken"),
+      client: window.localStorage.getItem("maihoum.client"),
+      uid: window.localStorage.getItem("maihoum.uid"),
+      expiry: window.localStorage.getItem("maihoum.expiry")
     };
     if (auth.accessToken && auth.client && auth.uid && auth.expiry) {
       agent.setAuth(auth);

@@ -12,14 +12,14 @@ default: &default
 
 development:
   <<: *default
-  database: arkivit_development
+  database: maihoum_development
 
 test:
   <<: *default
-  database: arkivit_test
+  database: maihoum_test
 
 production:
   <<: *default
-  database: arkivit_production
-  username: arkivit
-  password: <%= ENV['ARKIVIT_DATABASE_PASSWORD'] %>
+  database: maihoum_production
+  username: maihoum
+  password: <%= ENV['MAIHOUM_DATABASE_PASSWORD'] %>

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const LoggedOutView = props => {
   if (!props.currentUser) {
     return (
-      <ul className="nav navbar-nav pull-xs-right">
+      <ul className="navbar-nav my-lg-0">
         <li className="nav-item">
           <Link to="/login" className="nav-link">
             Sign in
@@ -25,7 +25,7 @@ const LoggedOutView = props => {
 const LoggedInView = props => {
   if (props.currentUser) {
     return (
-      <ul className="nav navbar-nav pull-xs-right">
+      <ul className="navbar-nav my-lg-0">
         <li className="nav-item">
           <Link to="/settings" className="nav-link">
             <i className="ion-gear-a" />
@@ -53,15 +53,10 @@ const LoggedInView = props => {
 class Header extends React.Component {
   render() {
     return (
-      <nav className="navbar navbar-light bg-primary">
+      <nav className="navbar navbar-light bg-secondary">
         <div className="container">
-          <Link to="/" className="navbar-brand">
-            <img
-              src="https://www.arkivit.se/wp-content/uploads/2017/03/ait-logo01.png"
-              height="100"
-              className="d-inline-block align-top"
-              alt=""
-            />
+          <Link to="/" id="home" className="navbar-brand">
+            MAIHOUM
           </Link>
 
           <LoggedOutView currentUser={this.props.currentUser} />

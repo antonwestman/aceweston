@@ -6,4 +6,4 @@ services:
     ports:
       - 5432:5432
     volumes:
-      - ~/docker_vols/arkivit/pg:/var/lib/postgresql/data
+      - ~/docker_vols/maihoum/pg:/var/lib/postgresql/data

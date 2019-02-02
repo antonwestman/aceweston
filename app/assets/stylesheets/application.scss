@@ -1,15 +1,19 @@
 @import "font-awesome-sprockets";
 @import "font-awesome";
 
-$arkiv-yellow: #fccd01;
-$arkiv-purple: #690ba9;
-$arkiv-lightyellow: #ffda39;
+$mai-pink: #ff1493;
+$mai-gray: #e6e6e6;
+$mai-lightpink: #fe71be;
 
 $theme-colors: (
-  "primary": $arkiv-yellow,
-  "secondary": $arkiv-purple,
-  "info": $arkiv-lightyellow,
+  "primary": $mai-pink,
+  "secondary": $mai-gray,
+  "info": $mai-lightpink,
   "warning": #ff8507
 );
 
 @import "bootstrap";
+
+a#home {
+  color: $mai-pink;
+}

@@ -54,17 +54,17 @@ const localStorageMiddleware = store => next => action => {
         uid: action.payload.auth["uid"],
         expiry: action.payload.auth["expiry"]
       };
-      window.localStorage.setItem("arkivit.accessToken", auth.accessToken);
-      window.localStorage.setItem("arkivit.client", auth.client);
-      window.localStorage.setItem("arkivit.uid", auth.uid);
-      window.localStorage.setItem("arkivit.expiry", auth.expiry);
+      window.localStorage.setItem("maihoum.accessToken", auth.accessToken);
+      window.localStorage.setItem("maihoum.client", auth.client);
+      window.localStorage.setItem("maihoum.uid", auth.uid);
+      window.localStorage.setItem("maihoum.expiry", auth.expiry);
       agent.setAuth(auth);
     }
   } else if (action.type === LOGOUT) {
-    window.localStorage.setItem("arkivit.accessToken", "");
-    window.localStorage.setItem("arkivit.client", "");
-    window.localStorage.setItem("arkivit.uid", "");
-    window.localStorage.setItem("arkivit.expiry", "");
+    window.localStorage.setItem("maihoum.accessToken", "");
+    window.localStorage.setItem("maihoum.client", "");
+    window.localStorage.setItem("maihoum.uid", "");
+    window.localStorage.setItem("maihoum.expiry", "");
     agent.setAuth(null);
   }
 

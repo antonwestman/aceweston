@@ -12,7 +12,7 @@ import {
 } from "../constants/actionTypes";
 
 const defaultState = {
-  appName: "ArkivIT",
+  appName: "Maihoum",
   accessToken: null,
   viewChangeCounter: 0
 };
