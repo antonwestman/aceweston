@@ -105,3 +105,6 @@ blocks:
         - name: RSpec - feature specs
           commands:
             - bundle exec rspec spec/features
+promotions:
+  - name: Deploy to Heroku
+    pipeline_file: heroku.yml
