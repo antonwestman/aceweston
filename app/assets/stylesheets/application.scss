@@ -1,0 +1,15 @@
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+$arkiv-yellow: #fccd01;
+$arkiv-purple: #690ba9;
+$arkiv-lightyellow: #ffda39;
+
+$theme-colors: (
+  "primary": $arkiv-yellow,
+  "secondary": $arkiv-purple,
+  "info": $arkiv-lightyellow,
+  "warning": #ff8507
+);
+
+@import "bootstrap";

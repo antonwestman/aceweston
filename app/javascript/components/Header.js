@@ -6,12 +6,6 @@ const LoggedOutView = props => {
     return (
       <ul className="nav navbar-nav pull-xs-right">
         <li className="nav-item">
-          <Link to="/" className="nav-link">
-            Home
-          </Link>
-        </li>
-
-        <li className="nav-item">
           <Link to="/login" className="nav-link">
             Sign in
           </Link>
@@ -33,14 +27,9 @@ const LoggedInView = props => {
     return (
       <ul className="nav navbar-nav pull-xs-right">
         <li className="nav-item">
-          <Link to="/" className="nav-link">
-            Home
-          </Link>
-        </li>
-
-        <li className="nav-item">
           <Link to="/settings" className="nav-link">
-            <i className="ion-gear-a" />&nbsp;Settings
+            <i className="ion-gear-a" />
+            &nbsp;Settings
           </Link>
         </li>
 
@@ -64,10 +53,15 @@ const LoggedInView = props => {
 class Header extends React.Component {
   render() {
     return (
-      <nav className="navbar navbar-light">
+      <nav className="navbar navbar-light bg-primary">
         <div className="container">
           <Link to="/" className="navbar-brand">
-            {this.props.appName.toLowerCase()}
+            <img
+              src="https://www.arkivit.se/wp-content/uploads/2017/03/ait-logo01.png"
+              height="100"
+              className="d-inline-block align-top"
+              alt=""
+            />
           </Link>
 
           <LoggedOutView currentUser={this.props.currentUser} />
