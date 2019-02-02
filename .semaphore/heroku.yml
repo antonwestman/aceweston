@@ -10,7 +10,7 @@ blocks:
   - name: Deploy
     task:
       secrets:
-        - name: maihoum-heroku
+        - name: maihoum-secret
       env_vars:
         - name: aceweston
           value: https://git.heroku.com/aceweston.git
