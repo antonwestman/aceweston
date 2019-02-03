@@ -2,7 +2,7 @@ import React from "react";
 
 class MainView extends React.Component {
   render() {
-    const loggedIn = this.props.currentUser;
+    const loggedIn = !!this.props.currentUser;
     return (
       <div className="text-center m-auto" style={{ maxWidth: "700px" }}>
         <img
@@ -12,7 +12,7 @@ class MainView extends React.Component {
         {loggedIn ? (
           <div />
         ) : (
-          <React.Fragment>
+          <div>
             <h1
               style={{
                 margin: "165px auto 50px auto",
@@ -28,7 +28,7 @@ class MainView extends React.Component {
               Maihoum ger dig en smidig och transparent säljprocess med
               kompetenta och oberoende mäklare, så att du slipper stressen!
             </span>
-          </React.Fragment>
+          </div>
         )}
       </div>
     );
