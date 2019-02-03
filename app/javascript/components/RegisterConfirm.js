@@ -13,7 +13,7 @@ class RegisterConfirm extends React.Component {
             <div className="col-md-6 offset-md-3 col-xs-12 mt-5">
               <h2 className="text-xs-center">Bara ett steg kvar</h2>
               <p className="text-xs-center">
-                Vi har skickat ett mail till dig med en bekräftlselänk.
+                Vi har skickat ett mail till dig med en bekräftelselänk.
               </p>
             </div>
           </div>
