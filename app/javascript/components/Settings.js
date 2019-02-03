@@ -62,9 +62,9 @@ class SettingsForm extends React.Component {
         <fieldset>
           <fieldset className="form-group">
             <input
-              className="form-control"
+              className="form-control "
               type="text"
-              placeholder="URL of profile picture"
+              placeholder="URL till profilbild"
               value={this.state.image}
               onChange={this.updateState("image")}
             />
@@ -72,9 +72,9 @@ class SettingsForm extends React.Component {
 
           <fieldset className="form-group">
             <input
-              className="form-control form-control-lg"
+              className="form-control"
               type="text"
-              placeholder="Username"
+              placeholder="Användarnamn"
               value={this.state.username}
               onChange={this.updateState("username")}
             />
@@ -82,7 +82,7 @@ class SettingsForm extends React.Component {
 
           <fieldset className="form-group">
             <input
-              className="form-control form-control-lg"
+              className="form-control"
               type="email"
               placeholder="Email"
               value={this.state.email}
@@ -95,7 +95,7 @@ class SettingsForm extends React.Component {
             type="submit"
             disabled={this.state.inProgress}
           >
-            Update Settings
+            Uppdatera inställningar
           </button>
         </fieldset>
       </form>
@@ -118,11 +118,11 @@ const mapDispatchToProps = dispatch => ({
 class Settings extends React.Component {
   render() {
     return (
-      <div className="settings-page">
+      <div className="settings-page mt-5">
         <div className="container page">
           <div className="row">
             <div className="col-md-6 offset-md-3 col-xs-12">
-              <h1 className="text-xs-center">Your Settings</h1>
+              <h2 className="text-xs-center">Inställningar</h2>
 
               <ListErrors errors={this.props.errors} />
 
@@ -137,7 +137,7 @@ class Settings extends React.Component {
                 className="btn btn-outline-danger"
                 onClick={this.props.onClickLogout}
               >
-                Or click here to logout.
+                Eller klicka här för att logga ut
               </button>
             </div>
           </div>

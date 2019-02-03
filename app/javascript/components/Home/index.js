@@ -8,8 +8,8 @@ import {
 
 const mapStateToProps = state => ({
   ...state.home,
-  appName: state.common.appName,
-  accessToken: state.common.accessToken
+  accessToken: state.common.accessToken,
+  currentUser: state.common.currentUser
 });
 
 const mapDispatchToProps = dispatch => ({
@@ -28,11 +28,12 @@ class Home extends React.Component {
   }
 
   render() {
+    const { currentUser } = this.props;
     return (
       <div className="home-page">
         <div className="container page">
           <div className="row">
-            <MainView />
+            <MainView currentUser={currentUser} />
           </div>
         </div>
       </div>
