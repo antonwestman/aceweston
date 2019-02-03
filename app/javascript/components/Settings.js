@@ -91,7 +91,7 @@ class SettingsForm extends React.Component {
           </fieldset>
 
           <button
-            className="btn btn-lg btn-primary pull-xs-right"
+            className="btn btn-primary pull-xs-right"
             type="submit"
             disabled={this.state.inProgress}
           >

@@ -1,3 +1,5 @@
+import image from "images/avatar_square.jpg";
+
 import React from "react";
 import { Link } from "react-router-dom";
 
@@ -36,11 +38,11 @@ const LoggedInView = props => {
         <li className="nav-item mx-2">
           <Link to={`/@${props.currentUser.username}`} className="nav-link">
             <img
-              src={props.currentUser.image}
-              className="user-pic"
+              className="avatar"
+              src={props.currentUser.image || image}
               alt={props.currentUser.username}
             />
-            {props.currentUser.username}
+            <div className="username">{props.currentUser.username}</div>
           </Link>
         </li>
       </ul>

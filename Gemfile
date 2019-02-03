@@ -42,6 +42,8 @@ gem 'jquery-rails' # used by bootstrap js
 
 gem 'awesome_print'
 
+gem 'pundit'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

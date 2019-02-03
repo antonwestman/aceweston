@@ -5,7 +5,9 @@ const superagent = superagentPromise(_superagent, global.Promise);
 
 const API_ROOT = "";
 
-const responseBody = res => res.body;
+const responseBody = res => {
+  return res.body;
+};
 const responseBodyWithAuth = res => {
   return { ...res.body, auth: res.headers };
 };
