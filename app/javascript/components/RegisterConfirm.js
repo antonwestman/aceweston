@@ -4,12 +4,16 @@ class RegisterConfirm extends React.Component {
   render() {
     return (
       <div className="auth-page">
+        <img
+          className="fullwidthBackgroundImage"
+          src="https://static.wixstatic.com/media/c555555df14347c3ad9aaf3625f4354e.jpg/v1/fill/w_1155,h_899,al_c,q_85/c555555df14347c3ad9aaf3625f4354e.webp"
+        />
         <div className="container page">
           <div className="row">
-            <div className="col-md-6 offset-md-3 col-xs-12">
-              <h2 className="text-xs-center">Only one more step</h2>
+            <div className="col-md-6 offset-md-3 col-xs-12 mt-5">
+              <h2 className="text-xs-center">Bara ett steg kvar</h2>
               <p className="text-xs-center">
-                We have sent you an email with a confirmation link.
+                Vi har skickat ett mail till dig med en bekräftlselänk.
               </p>
             </div>
           </div>
