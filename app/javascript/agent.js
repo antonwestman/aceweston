@@ -68,7 +68,7 @@ const Auth = {
       email: email,
       password: password,
       password_confirmation: passwordConfirmation,
-      confirm_success_url: "www.dn.se"
+      confirm_success_url: "login"
     }),
   logout: () => requests.del("/auth/sign_out")
 };

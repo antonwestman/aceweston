@@ -4,16 +4,16 @@ import { Link } from "react-router-dom";
 const LoggedOutView = props => {
   if (!props.currentUser) {
     return (
-      <ul className="navbar-nav my-lg-0">
-        <li className="nav-item">
+      <ul className="navbar-nav flex-row">
+        <li className="nav-item mx-2">
           <Link to="/login" className="nav-link">
-            Sign in
+            Logga in
           </Link>
         </li>
 
-        <li className="nav-item">
+        <li className="nav-item mx-2">
           <Link to="/register" className="nav-link">
-            Sign up
+            Skapa ett konto
           </Link>
         </li>
       </ul>
@@ -25,15 +25,15 @@ const LoggedOutView = props => {
 const LoggedInView = props => {
   if (props.currentUser) {
     return (
-      <ul className="navbar-nav my-lg-0">
-        <li className="nav-item">
+      <ul className="navbar-nav flex-row">
+        <li className="nav-item mx-2">
           <Link to="/settings" className="nav-link">
             <i className="ion-gear-a" />
-            &nbsp;Settings
+            &nbsp;Inställningar
           </Link>
         </li>
 
-        <li className="nav-item">
+        <li className="nav-item mx-2">
           <Link to={`/@${props.currentUser.username}`} className="nav-link">
             <img
               src={props.currentUser.image}
@@ -53,12 +53,11 @@ const LoggedInView = props => {
 class Header extends React.Component {
   render() {
     return (
-      <nav className="navbar navbar-light bg-secondary">
+      <nav className="navbar justify-content-between navbar-light bg-secondary">
         <div className="container">
-          <Link to="/" id="home" className="navbar-brand">
+          <Link id="home" className="navbar-brand" to="/">
             MAIHOUM
           </Link>
-
           <LoggedOutView currentUser={this.props.currentUser} />
 
           <LoggedInView currentUser={this.props.currentUser} />
