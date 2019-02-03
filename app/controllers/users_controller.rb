@@ -1,7 +1,7 @@
 class UsersController < ApiController
   before_action :authenticate_user!
   before_action :set_user, only: %i[update]
-  
+
   def update
     authorize @user
 
@@ -11,6 +11,7 @@ class UsersController < ApiController
       render json: @user.errors, status: :unprocessable_entity
     end
   end
+
   private
 
   # Use callbacks to share common setup or constraints between actions.
