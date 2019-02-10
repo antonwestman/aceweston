@@ -1,15 +1,29 @@
 import superagentPromise from "superagent-promise";
 import _superagent from "superagent";
+import { toast } from "react-toastify";
 
 const superagent = superagentPromise(_superagent, global.Promise);
 
 const API_ROOT = "";
 
+const IGNORED_ERROR_URLS = ["/auth/validate_token"];
+
 const responseBody = res => {
   return res.body;
 };
+
 const responseBodyWithAuth = res => {
   return { ...res.body, auth: res.headers };
+};
+
+const displayError = error => {
+  const url = error.response.req.url;
+  if (!IGNORED_ERROR_URLS.includes(url)) {
+    toast(error.response.body.errors.join(","), {
+      type: toast.TYPE.ERROR,
+      hideProgressBar: true
+    });
+  }
 };
 
 let accessToken = null;
@@ -29,31 +43,37 @@ const requests = {
   del: url =>
     superagent
       .del(`${API_ROOT}${url}`)
+      .on("error", displayError)
       .use(accessTokenPlugin)
       .then(responseBody),
   get: url =>
     superagent
       .get(`${API_ROOT}${url}`)
+      .on("error", displayError)
       .use(accessTokenPlugin)
       .then(responseBody),
   put: (url, body) =>
     superagent
       .put(`${API_ROOT}${url}`, body)
+      .on("error", displayError)
       .use(accessTokenPlugin)
       .then(responseBody),
   post: (url, body) =>
     superagent
       .post(`${API_ROOT}${url}`, body)
+      .on("error", displayError)
       .use(accessTokenPlugin)
       .then(responseBody),
   getWithAuth: (url, body) =>
     superagent
       .get(`${API_ROOT}${url}`)
+      .on("error", displayError)
       .use(accessTokenPlugin)
       .then(responseBodyWithAuth),
   postWithAuth: (url, body) =>
     superagent
       .post(`${API_ROOT}${url}`, body)
+      .on("error", displayError)
       .use(accessTokenPlugin)
       .then(responseBodyWithAuth)
 };

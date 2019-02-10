@@ -14,5 +14,3 @@ export const ASYNC_START = "ASYNC_START";
 export const ASYNC_END = "ASYNC_END";
 export const UPDATE_FIELD_AUTH = "UPDATE_FIELD_AUTH";
 export const UPDATE_FIELD_EDITOR = "UPDATE_FIELD_EDITOR";
-export const FOLLOW_USER = "FOLLOW_USER";
-export const UNFOLLOW_USER = "UNFOLLOW_USER";

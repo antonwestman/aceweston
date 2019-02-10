@@ -11,6 +11,7 @@ import RegisterConfirm from "./RegisterConfirm";
 import Settings from "./Settings";
 import { store } from "../redux/createStore";
 import { push } from "react-router-redux";
+import { ToastContainer, toast } from "react-toastify";
 
 const mapStateToProps = state => {
   return {
@@ -68,6 +69,7 @@ class App extends React.Component {
             <Route path="/registerConfirm" component={RegisterConfirm} />
             <Route path="/settings" component={Settings} />
           </Switch>
+          <ToastContainer />
         </div>
       );
     }

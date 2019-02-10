@@ -1,6 +1,9 @@
-class UsersController < ApiController
+class UsersController < ApplicationController
   before_action :authenticate_user!
   before_action :set_user, only: %i[update]
+
+  after_action :verify_policy_scoped, only: []
+  after_action :verify_authorized, except: []
 
   def update
     authorize @user

@@ -1,5 +1,6 @@
 @import "font-awesome-sprockets";
 @import "font-awesome";
+@import "react-toastify/dist/ReactToastify.css";
 
 $mai-pink: #ff1493;
 $mai-gray: #e6e6e6;
@@ -42,8 +43,8 @@ a#home {
 
 .nav-link {
   .avatar {
-    width: 24px;
-    height: 24px;
+    width: 25px;
+    height: 25px;
     border-radius: 50%;
     border: 1px solid $mai-lightpink;
     z-index: 999;
@@ -51,6 +52,5 @@ a#home {
   }
   .username {
     display: inline-block;
-    vertical-align: middle;
   }
 }
